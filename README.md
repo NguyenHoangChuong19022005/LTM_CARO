@@ -23,7 +23,6 @@ Dự án được thực hiện trong môn **Lập Trình Mạng (LTM)**, mục 
 
 ---
 
-## 📂 Cấu trúc thư mục dự án
 
 ## 📂 Cấu trúc thư mục dự án
 
