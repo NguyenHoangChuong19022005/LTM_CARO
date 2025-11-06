@@ -17,8 +17,6 @@ Dự án được thực hiện trong môn **Lập Trình Mạng (LTM)**, mục 
 | (Người chơi A) | | (Socket + DB) | | (Người chơi B) |
 +-----------------+ +-----------------+ +-----------------+
 
-less
-Sao chép mã
 
 - **Server:** Quản lý kết nối socket, lưu thông tin user, phòng chơi, kết quả.
 - **Client:** Hiển thị giao diện, nhận dữ liệu từ server, gửi nước đi và thông tin người chơi.
@@ -27,48 +25,48 @@ Sao chép mã
 
 ## 📂 Cấu trúc thư mục dự án
 
-''' bash
+## 📂 Cấu trúc thư mục dự án
+
+```bash
 caro_project/
 ├── caro-game-client-main/
-│ ├── src/
-│ │ ├── controller/
-│ │ │ ├── Client.java
-│ │ │ └── SocketHandle.java
-│ │ ├── model/
-│ │ │ ├── Point.java
-│ │ │ ├── User.java
-│ │ │ └── XOButton.java
-│ │ └── view/
-│ │ ├── LoginFrm.java
-│ │ ├── MainFrm.java
-│ │ ├── CompetitorInfoFrm.form
-│ │ ├── CompetitorInfoFrm.java
-│ │ ├── CreateRoomPasswordFrm.form
-│ │ ├── CreateRoomPasswordFrm.java
-│ │ ├── GameFrm.java
-│ │ ├── WaitRoomFrm.java
-│ │ └── (các form khác)
-│ ├── build.xml
-│ ├── manifest.mf
-│ └── caro-game-client-main.iml
+│   ├── src/
+│   │   ├── controller/
+│   │   │   ├── Client.java
+│   │   │   └── SocketHandle.java
+│   │   ├── model/
+│   │   │   ├── Point.java
+│   │   │   ├── User.java
+│   │   │   └── XOButton.java
+│   │   └── view/
+│   │       ├── LoginFrm.java
+│   │       ├── MainFrm.java
+│   │       ├── CompetitorInfoFrm.form
+│   │       ├── CompetitorInfoFrm.java
+│   │       ├── CreateRoomPasswordFrm.form
+│   │       ├── CreateRoomPasswordFrm.java
+│   │       ├── GameFrm.java
+│   │       ├── WaitRoomFrm.java
+│   │       └── (các form khác)
+│   ├── build.xml
+│   ├── manifest.mf
+│   └── caro-game-client-main.iml
 │
 └── caro-game-server/
-├── src/
-│ ├── controller/
-│ │ ├── Server.java
-│ │ ├── ServerThread.java
-│ │ └── RoomManager.java
-│ ├── model/
-│ │ ├── User.java
-│ │ ├── Room.java
-│ │ └── DatabaseConnection.java
-│ └── view/
-│ └── ServerFrm.java
-├── build.xml
-└── manifest.mf
+    ├── src/
+    │   ├── controller/
+    │   │   ├── Server.java
+    │   │   ├── ServerThread.java
+    │   │   └── RoomManager.java
+    │   ├── model/
+    │   │   ├── User.java
+    │   │   ├── Room.java
+    │   │   └── DatabaseConnection.java
+    │   └── view/
+    │       └── ServerFrm.java
+    ├── build.xml
+    └── manifest.mf
 
-markdown
-Sao chép mã
 
 ---
 
@@ -134,8 +132,6 @@ Chạy chương trình (Run).
 
 Console sẽ hiển thị:
 
-nginx
-Sao chép mã
 Server started on port 2209
 Waiting for client connections...
 💻 2. Chạy Client
@@ -147,8 +143,6 @@ Chạy ứng dụng.
 
 Trong màn hình kết nối, nhập:
 
-yaml
-Sao chép mã
 IP: 127.0.0.1
 Port: 2209
 → Kết nối đến server local.
@@ -171,8 +165,6 @@ Server tạo thread riêng cho từng client (ServerThread).
 
 Dữ liệu trao đổi qua chuỗi JSON hoặc định dạng riêng:
 
-json
-Sao chép mã
 { "action": "create_room", "data": "roomName=ABC" }
 Server xử lý và phản hồi lại client tương ứng.
 
