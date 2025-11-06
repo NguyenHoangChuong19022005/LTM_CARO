@@ -27,6 +27,7 @@ Sao chép mã
 
 ## 📂 Cấu trúc thư mục dự án
 
+''' bash
 caro_project/
 ├── caro-game-client-main/
 │ ├── src/
