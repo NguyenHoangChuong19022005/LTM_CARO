@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-/**
- * @author Admin
- */
 public class User {
     private int ID;
     private String username;
@@ -21,32 +13,21 @@ public class User {
     private boolean playing;
     private int rank;
 
-    public User(int ID, String username, String password, String nickname, String avatar, int numberOfGame, int numberOfWin, int numberOfDraw, int rank) {
-        this.ID = ID;
-        this.username = username;
-        this.password = password;
-        this.nickname = nickname;
-        this.avatar = avatar;
-        this.numberOfGame = numberOfGame;
-        this.numberOfWin = numberOfWin;
-        this.numberOfDraw = numberOfDraw;
+    public User(int ID, String username, String password, String nickname, String avatar,
+                int numberOfGame, int numberOfWin, int numberOfDraw, int rank) {
+        this(ID, username, password, nickname, avatar, numberOfGame, numberOfWin, numberOfDraw);
         this.rank = rank;
     }
 
-    public User(int ID, String username, String password, String nickname, String avatar, int numberOfGame, int numberOfWin, int numberOfDraw, boolean online, boolean playing) {
-        this.ID = ID;
-        this.username = username;
-        this.password = password;
-        this.nickname = nickname;
-        this.avatar = avatar;
-        this.numberOfGame = numberOfGame;
-        this.numberOfWin = numberOfWin;
-        this.numberOfDraw = numberOfDraw;
+    public User(int ID, String username, String password, String nickname, String avatar,
+                int numberOfGame, int numberOfWin, int numberOfDraw, boolean online, boolean playing) {
+        this(ID, username, password, nickname, avatar, numberOfGame, numberOfWin, numberOfDraw);
         this.online = online;
         this.playing = playing;
     }
 
-    public User(int ID, String username, String password, String nickname, String avatar, int numberOfGame, int numberOfWin, int numberOfDraw) {
+    public User(int ID, String username, String password, String nickname, String avatar,
+                int numberOfGame, int numberOfWin, int numberOfDraw) {
         this.ID = ID;
         this.username = username;
         this.password = password;
@@ -56,7 +37,6 @@ public class User {
         this.numberOfWin = numberOfWin;
         this.numberOfDraw = numberOfDraw;
     }
-
 
     public User(int ID, String nickname) {
         this.ID = ID;
@@ -64,8 +44,7 @@ public class User {
     }
 
     public User(int ID, String nickname, boolean online, boolean playing) {
-        this.ID = ID;
-        this.nickname = nickname;
+        this(ID, nickname);
         this.online = online;
         this.playing = playing;
     }
@@ -74,7 +53,6 @@ public class User {
         this.username = username;
         this.password = password;
     }
-
 
     public User(String username, String password, String nickname, String avatar) {
         this.username = username;
@@ -150,22 +128,6 @@ public class User {
         this.numberOfWin = numberOfWin;
     }
 
-    public boolean isOnline() {
-        return online;
-    }
-
-    public void setOnline(boolean isOnline) {
-        this.online = isOnline;
-    }
-
-    public boolean isPlaying() {
-        return playing;
-    }
-
-    public void setPlaying(boolean isPlaying) {
-        this.playing = isPlaying;
-    }
-
     public int getNumberOfDraw() {
         return numberOfDraw;
     }
@@ -174,5 +136,19 @@ public class User {
         this.numberOfDraw = numberOfDraw;
     }
 
+    public boolean isOnline() {
+        return online;
+    }
 
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
+
+    public boolean isPlaying() {
+        return playing;
+    }
+
+    public void setPlaying(boolean playing) {
+        this.playing = playing;
+    }
 }
