@@ -275,3 +275,5 @@
     </Component>
   </SubComponents>
 </Form>
+git rm Admin.form
+git commit -m "Xoa file Admin.form"
